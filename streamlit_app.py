@@ -38,3 +38,7 @@ st.altair_chart(alt.Chart(df, height=700, width=700)
         color=alt.Color("idx", legend=None, scale=alt.Scale()),
         size=alt.Size("rand", legend=None, scale=alt.Scale(range=[1, 150])),
     ))
+
+df = pd.DataFrame(np.random.randn(10, 5), columns=("col %d" % i for i in range(5)))
+
+st.table(df)
